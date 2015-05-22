@@ -1,6 +1,6 @@
 **NOTE:** This is a fork of of the original Syncpad extension. It seems that the original developer is no longer mantaining the project. This fork should fix all of the bugs in the original version related to installing the extension. There may be other bugs introduced by my fix, or hidden bugs that I have not encountered yet. You can report these bugs on the issues page, but there is no guarantee I will fix them as this is not my extension.
 
-I will not be adding this extension to the Chrome Store since it's not my own work. To install, download the files from Git or download the zip and extract it. Then follow these instructions: https://developer.chrome.com/extensions/getstarted#unpacked
+You can download this from the chrome store here: https://chrome.google.com/webstore/detail/pcchkpddpepanbahfbdhcnmfbkanibog/
 
 CHANGELOG
 ===============
