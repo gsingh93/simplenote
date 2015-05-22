@@ -123,7 +123,7 @@ function unloadListener() {
         if (extData.isTab)
             extData.background.SimplenoteBG.setOpenPopup(true);
 
-        extData.background.setTimeout("SimplenoteBG.popupClosed()", 10);
+        extData.background.setTimeout(extData.background.SimplenoteBG.popupClosed, 10);
     } catch(e) {
         exceptionCaught(e);
     }

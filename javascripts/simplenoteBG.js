@@ -164,28 +164,30 @@ var SimplenoteBG = {
     popupClosed: function() {
 
         try {
-            this.log("popupClosed()");
+            SimplenoteBG.log("popupClosed()");
 
-            if (this.saveNote) {
+            if (SimplenoteBG.saveNote) {
 
-                if (this.saveNote.key && this.saveNote.key != "")
-                    SimplenoteDB.updateNote(this.saveNote, function(note) {
-                        lastOpen.openTo(note.key);
+                if (SimplenoteBG.saveNote.key && SimplenoteBG.saveNote.key != "")
+                    SimplenoteDB.updateNote(SimplenoteBG.saveNote, function(note) {
+                        // I don't see last opened defined anywhere, so i'll just comment it out...
+                        //lastOpen.openTo(note.key);
                         SimplenoteBG.needCMRefresh = true;
                         SimplenoteBG.saveNote = undefined;
                         SimplenoteBG.checkRefreshs();
                         SimplenoteBG.log("popupClosed: update success.");
                     });
                 else
-                    SimplenoteDB.createNote(this.saveNote, function(note) {
-                        lastOpen.openTo(note.key);
+                    SimplenoteDB.createNote(SimplenoteBG.saveNote, function(note) {
+                        // I don't see last opened defined anywhere, so i'll just comment it out...
+                        //lastOpen.openTo(note.key);
                         SimplenoteBG.needCMRefresh = true;
                         SimplenoteBG.saveNote = undefined;
                         SimplenoteBG.checkRefreshs();
                         SimplenoteBG.log("popupClosed: create success.");
                     });
             } else
-                this.checkRefreshs();
+                SimplenoteBG.checkRefreshs();
         } catch (e) {
             exceptionCaught(e);
         }
